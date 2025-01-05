@@ -4,6 +4,9 @@
 - Student Housing
 - [yaibot.botverse](#YAIBOT.BOTVERSE)
     - [Current vs Proopsed system](#Current-vs-Proposed-system)
+        - [Current System](#Current-System)
+        - [Proposed System](#Proposed-System)
+            - [Example conversation](#Example-conversation)
 - yaibot.synergy
 - Assitant API
 - Ray - Distributed computing
@@ -50,7 +53,7 @@ graph TD
 ```
 
 
-#### Proposed system
+#### Proposed System
 
 ```mermaid
 graph TD
@@ -110,7 +113,7 @@ graph TD
 
 ```
 
-
+##### Example conversation
 1. Initial Request:
     - The Prospect (user) asks the question, "Do you allow dogs?" related to the pet policy.
     - The request is directed to the Triage Agent BOT.
