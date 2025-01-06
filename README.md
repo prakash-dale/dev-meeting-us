@@ -1,7 +1,8 @@
 # Topics
 
-- yaibot.rekindle
-- Student Housing
+- [yaibot.rekindle](#YAIBOT.REKINDLE)
+- [Student Housing](#STUDENT-HOUSING)
+- [yaibot.synergy](#YAIBOT.SYNERGY)
 - [yaibot.botverse](#YAIBOT.BOTVERSE)
     - [Current vs Proopsed system](#Current-vs-Proposed-system)
         - [Current System](#Current-System)
@@ -9,12 +10,44 @@
             - [Example conversation](#Example-conversation)
             - [Sequence Diagram](#Sequence-Diagram)
     - [Technology](#Techstack-for-BOTVERSE)
-- yaibot.synergy
 - Assistant API
 - Ray - Distributed computing
 - Automation/Unit Testing
 
 ## YAIBOT.REKINDLE
+
+Experimental project codenamed *rekindle* to be presented to Amit, Manish, Jon and Obaid
+
+**Email from Akshai below**
+```
+On my flight and figured I would bother all of you with the below thought. 
+ChatIQ is currently very good at “Read and Respond” which is supremely powerful for our clients. But the but is not particularly concerned with how helpful it is for the Prospect/Resident. 
+In my mind the next iteration should evolve to ChatIQ being the Prospect/Residents guide/advocate through the entire process. It should know how you’ve interacted with our Client in the past, follow up on things that may create a “delightful” experience, and then predict the next step and suggest help/guidance for that.
+Basically, the evolution is while it’s there to support making our Clients more efficient, it also starts to make the Customer’s experience that much better. 
+With that construct, it would be virtually impossible for Elise to compete with us. Because it requires the data we already have.
+```
+
+**Requirement based on above email**
+
+- The system should determine if the user is a returning visitor.  
+- Utilize the following identifiers:  
+  - **Email ID** for interactions via the email channel.  
+  - **Phone number** for SMS and voice communications.  
+  - **Webchat session details** for web-based chats.  
+  - **Voyager Resident ID** for logged-in users.  
+  - **Voyager Prospect ID**, when available.  
+- **Discussion Point**: Explore additional methods to identify returning users.  
+- Save embedded chat history in a Redis vector store during user interactions for future similarity-based searches.  
+- Retrieve relevant information from the Redis vector store for returning users to provide tailored suggestions.  
+- Incorporate suggestion messages into the chat flow to enhance the user experience.
+
+**Example story**
+
+Sam visits the 'Elite Residency' website and inquires whether the property allows his pet bulldog, Bruno. Unfortunately, Bruno weighs 50 pounds, exceeding the property's pet weight limit of 40 pounds.
+
+Undeterred, Sam searches for another property, 'Chapel Towers,' and sends a text message to their phone number to ask about the availability of a two-bedroom apartment. A chatbot responds, helping Sam find an apartment that meets his criteria and providing all the relevant details.
+
+To Sam's delight, he receives a follow-up message stating: "Great news! Chapel Towers is a pet-friendly property and allows dogs weighing up to 50 pounds. They are happy to welcome Bruno!"
 
 ## STUDENT HOUSING
 
@@ -31,6 +64,7 @@ Below are some potential new use cases/intents for student-related features:
 - Leasing Specials
 - Rentable Items
 
+## YAIBOT.SYNERGY
 
 ## YAIBOT.BOTVERSE
 
@@ -196,10 +230,12 @@ sequenceDiagram
 
 
 ### Techstack for BOTVERSE
-    - OpenAI, FastAPI
-    - OpenAI Swarm/CrewAI/LanGraph
-    - Ray distributed computing
+- OpenAI Swarm/CrewAI/LanGraph \
+    Swarm focuses on making agent coordination and execution lightweight, highly controllable, and easily testable. \
+    It accomplishes this through two primitive abstractions: Agents and handoffs. An Agent encompasses instructions and tools, and can at any point choose to hand off a conversation to another Agent. \
+    These primitives are powerful enough to express rich dynamics between tools and networks of agents, allowing you to build scalable, real-world solutions while avoiding a steep learning curve.
 
-## YAIBOT.SYNERGY
+
+
 
 
