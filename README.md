@@ -11,7 +11,6 @@
             - [Sequence Diagram](#Sequence-Diagram)
     - [Technology](#Techstack-for-BOTVERSE)
 - Assistant API
-- Ray - Distributed computing
 - Automation/Unit Testing
 
 ## YAIBOT.REKINDLE
@@ -225,9 +224,6 @@ sequenceDiagram
     end
 
 ```
-
-
-
 
 ### Techstack for BOTVERSE
 - OpenAI Swarm/CrewAI/LanGraph \
