@@ -8,10 +8,28 @@
         - [Proposed System](#Proposed-System)
             - [Example conversation](#Example-conversation)
             - [Sequence Diagram](#Sequence-Diagram)
+    - [Technology](#Techstack-for-BOTVERSE)
 - yaibot.synergy
-- Assitant API
+- Assistant API
 - Ray - Distributed computing
 - Automation/Unit Testing
+
+## YAIBOT.REKINDLE
+
+## STUDENT HOUSING
+
+To Consult with the stakeholder to determine which student intents are most relevant from the client demo perspective.
+
+Below are some potential new use cases/intents for student-related features:
+
+- Certification type
+    - EPC Rating
+    - Council Tax Rating
+- Nearby places
+- Student ID Verification
+- Demographics
+- Leasing Specials
+- Rentable Items
 
 
 ## YAIBOT.BOTVERSE
@@ -175,6 +193,12 @@ sequenceDiagram
 ```
 
 
+
+
+### Techstack for BOTVERSE
+    - OpenAI, FastAPI
+    - OpenAI Swarm/CrewAI/LanGraph
+    - Ray distributed computing
 
 ## YAIBOT.SYNERGY
 
