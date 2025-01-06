@@ -145,9 +145,8 @@ graph TD
     - However, the Community Manager BOT is identified as the faster responder.
 5. Response Handling:
     - The Triage Agent BOT transfers the request to the Community Manager BOT.
-    - The Community Manager BOT formulates the response and sends it to the Leasing Agent BOT.
+    - The Community Manager BOT formulates the response and sends it to the Triage Agent BOT.
 6. Response Relay:
-    - The Leasing Agent BOT relays the response to the Triage Agent BOT.
     - The Triage Agent BOT forwards the final response back to the Prospect.
 
 ##### Sequence Diagram
