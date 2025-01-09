@@ -1,6 +1,7 @@
 # Topics
 
 - [yaibot.rekindle](#YAIBOT.REKINDLE)
+- [yaibot.ole][#yaibot.ole]
 - [Student Housing](#STUDENT-HOUSING)
 - [yaibot.synergy](#YAIBOT.SYNERGY)
 - [yaibot.botverse](#YAIBOT.BOTVERSE)
@@ -36,7 +37,8 @@ With that construct, it would be virtually impossible for Elise to compete with 
   - **Voyager Resident ID** for logged-in users.  
   - **Voyager Prospect ID**, when available.  
 - **Discussion Point**: Explore additional methods to identify returning users.  
-- Save embedded chat history in a Redis vector store during user interactions for future similarity-based searches.  
+- Save embedded chat history in a Redis vector store during user interactions for future similarity-based searches.
+- In similarity search, it should search for documents having matching companyid metadata. In short, system will work for the properties within the company boundary.
 - Retrieve relevant information from the Redis vector store for returning users to provide tailored suggestions.  
 - Incorporate suggestion messages into the chat flow to enhance the user experience.
 
@@ -47,6 +49,30 @@ Sam visits the 'Elite Residency' website and inquires whether the property allow
 Undeterred, Sam searches for another property, 'Chapel Towers,' and sends a text message to their phone number to ask about the availability of a two-bedroom apartment. A chatbot responds, helping Sam find an apartment that meets his criteria and providing all the relevant details.
 
 To Sam's delight, he receives a follow-up message stating: "Great news! Chapel Towers is a pet-friendly property and allows dogs weighing up to 50 pounds. They are happy to welcome Bruno!"
+
+## YAIBOT.OLE
+
+Message from Akshai
+
+```
+I think we should also be thinking about ChatIQ and Rentcafe.com
+- Right now, ChatIQ only shows up on the property detail page
+- I think we should have ChatIQ show up on Rentcafe.com itself
+- ChatIQ should help a person search for the appropriate apartment ("I want a place close to a park that has a nice gym")
+- Here again, we build a relationship with the Customer, but it's broader and covers the properties in Rentcafe.com
+- And helps sell our resident services (RS Power, Insurance, etc)
+```
+
+## Probable implementation
+
+### Build Property Profile
+
+- **Property Profile Builder**:  A task will call verious aibot apis, like property info, pet policy, amenities, community amenities, etc and build a profile of the property and save it in property.summary column.
+- **Queue Task**: Whenvever a conversation incoming request comes, a background task will queue the task 'Property Profile Builder' task.
+- **Execute Task**: A background service will pick up one task that was queued yesterday.
+
+Task queuing will help to ensure that profile for a given property is built only once per day.
+
 
 ## STUDENT HOUSING
 
