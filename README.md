@@ -73,6 +73,7 @@ I think we should also be thinking about ChatIQ and Rentcafe.com
 
 Task queuing will help to ensure that profile for a given property is built only once per day.
 
+> Embedding is a machine learning processs to convert complex, high-dimensional data e.g. text, image etc. into lower-dimensional representations while preserving essential relationships and structure.
 
 ## STUDENT HOUSING
 
