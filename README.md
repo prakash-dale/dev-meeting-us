@@ -13,6 +13,8 @@
     - [Technology](#Techstack-for-BOTVERSE)
 - Assistant API
 - Automation/Unit Testing
+- What is?
+    - Genesys Pure Cloud
 
 ## YAIBOT.REKINDLE
 
